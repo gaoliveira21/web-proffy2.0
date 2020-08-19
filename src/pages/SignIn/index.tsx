@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Checkbox from '../../components/Checkbox';
+import Input from '../../components/Input';
 
 import { Container, LogoContent, Main, RememberMe, Footer } from './styles';
 
@@ -19,17 +20,15 @@ const SignIn: React.FC = () => {
       <Main>
         <form>
           <h2>Fazer login</h2>
-          <input type="text" />
-          <input type="password" />
+          <Input type="email" name="email" label="Email" />
+          <Input type="password" name="password" label="Senha" />
           <div>
             <RememberMe>
               <Checkbox />
               <a href="#!">Esqueci minha senha</a>
             </RememberMe>
           </div>
-          <button disabled type="button">
-            Entrar
-          </button>
+          <button type="button">Entrar</button>
           <Footer>
             <p>
               Não tem conta? <a href="#!">Cadastre-se</a>

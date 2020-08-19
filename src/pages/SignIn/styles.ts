@@ -9,7 +9,7 @@ export const Container = styled.div`
   grid-template-rows: 0.3fr 0.7fr;
 
   @media (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.7fr 0.3fr;
     height: 100vh;
   }
 `;
@@ -63,6 +63,7 @@ export const Main = styled.main`
       padding: 1.6rem 0;
       width: 100%;
       cursor: pointer;
+      transition: background 0.4s ease-in-out;
 
       display: flex;
       align-items: center;
@@ -80,6 +81,10 @@ export const Main = styled.main`
     button:disabled {
       background: var(--color-button-disabled);
       color: var(--color-text-complement);
+    }
+
+    button:hover {
+      background: var(--color-secondary-dark);
     }
   }
 

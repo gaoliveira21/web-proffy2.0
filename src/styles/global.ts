@@ -8,8 +8,8 @@ export default createGlobalStyle`
     --color-primary: #8257E5;
     --color-primary-dark: #774DD6;
     --color-primary-darker: #6842C2;
-    --color-secundary: #04D361;
-    --color-secundary-dark: #04BF58;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
     --color-title-in-primary: #FFFFFF;
     --color-text-in-primary: #D4C2FF;
     --color-text-title: #32264D;
@@ -18,6 +18,7 @@ export default createGlobalStyle`
     --color-line-in-white: #E6E6F0;
     --color-input-background: #F8F8FC;
     --color-button-text: #FFFFFF;
+    --color-button-disabled: #DCDCE5;
     --color-box-base: #FFFFFF;
     --color-box-footer: #FAFAFC;
 

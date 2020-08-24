@@ -27,7 +27,7 @@ const SignIn: React.FC = () => {
           <div>
             <RememberMe>
               <Checkbox />
-              <a href="#!">Esqueci minha senha</a>
+              <Link to="/reset-password">Esqueci minha senha</Link>
             </RememberMe>
           </div>
           <Button>Entrar</Button>

@@ -13,6 +13,10 @@ Versão 2.0 do projeto desenvolvido durante a 2° edição da Next Level Week re
 
 ---
 
+<img src="./.github/login-page.png">
+
+---
+
 ## :hammer_and_wrench: Tecnologias
 
 - [ReactJS](https://pt-br.reactjs.org/)

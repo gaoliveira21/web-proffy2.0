@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 import { Container, LogoContent, Main } from './styles';
 
@@ -18,8 +19,8 @@ const SignUp: React.FC = () => {
           <Input type="text" name="first-name" label="Nome" />
           <Input type="text" name="last-name" label="Sobrenome" />
           <Input type="email" name="email" label="Email" />
-          <Input type="password" name="password" label="Senha" />
-          <button type="button">Entrar</button>
+          <Input type="password" name="password" label="Senha" icon />
+          <Button>Concluir cadastro</Button>
         </form>
       </Main>
       <LogoContent>

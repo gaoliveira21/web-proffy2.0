@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Checkbox from '../../components/Checkbox';
 import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 import { Container, LogoContent, Main, RememberMe, Footer } from './styles';
 
@@ -28,10 +30,10 @@ const SignIn: React.FC = () => {
               <a href="#!">Esqueci minha senha</a>
             </RememberMe>
           </div>
-          <button type="button">Entrar</button>
+          <Button>Entrar</Button>
           <Footer>
             <p>
-              Não tem conta? <a href="#!">Cadastre-se</a>
+              Não tem conta? <Link to="sign-up">Cadastre-se</Link>
             </p>
             <span>
               É de graça <img src={heartIcon} alt="Coração" />

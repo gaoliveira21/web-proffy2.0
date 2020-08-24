@@ -9,7 +9,7 @@ export const Container = styled.div`
   grid-template-rows: 0.3fr 0.7fr;
 
   @media (min-width: 1100px) {
-    grid-template-columns: 0.7fr 0.3fr;
+    grid-template-columns: 0.5fr 0.5fr;
     height: 100vh;
   }
 `;

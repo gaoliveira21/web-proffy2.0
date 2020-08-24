@@ -12,8 +12,8 @@ const SignUp: React.FC = () => {
   return (
     <Container>
       <Main>
-        <img src={backIcon} alt="Voltar" />
         <form>
+          <img src={backIcon} alt="Voltar" />
           <h2>Cadastro</h2>
           <p>Preencha os dados abaixo para começar.</p>
           <Input type="text" name="first-name" label="Nome" />

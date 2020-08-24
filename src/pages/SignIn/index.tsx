@@ -23,7 +23,7 @@ const SignIn: React.FC = () => {
         <form>
           <h2>Fazer login</h2>
           <Input type="email" name="email" label="Email" />
-          <Input type="password" name="password" label="Senha" />
+          <Input type="password" name="password" label="Senha" icon />
           <div>
             <RememberMe>
               <Checkbox />

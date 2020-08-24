@@ -39,6 +39,10 @@ export const LogoContent = styled.div`
     font-size: 1.8rem;
     max-width: 20rem;
   }
+
+  @media (min-width: 1100px) {
+    min-height: 100vh;
+  }
 `;
 
 export const Main = styled.main`
@@ -49,9 +53,11 @@ export const Main = styled.main`
   padding: 2rem;
 
   img {
+    cursor: pointer;
     display: flex;
     align-self: flex-start;
     justify-self: start;
+    margin-bottom: 2rem;
   }
 
   form {
@@ -74,6 +80,10 @@ export const Main = styled.main`
       color: var(--color-text-title);
       font-size: 1.4rem;
       margin-bottom: 2rem;
+    }
+
+    button {
+      margin: 3rem 0;
     }
   }
 `;

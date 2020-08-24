@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -13,7 +14,9 @@ const SignUp: React.FC = () => {
     <Container>
       <Main>
         <form>
-          <img src={backIcon} alt="Voltar" />
+          <Link to="/">
+            <img src={backIcon} alt="Voltar" />
+          </Link>
           <h2>Cadastro</h2>
           <p>Preencha os dados abaixo para começar.</p>
           <Input type="text" name="first-name" label="Nome" />

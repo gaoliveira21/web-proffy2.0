@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Checkbox from '../../components/Checkbox';
-import Input from '../../components/Input';
+import Input from '../../components/AuthInput';
 import Button from '../../components/Button';
 
 import { Container, LogoContent, Main, RememberMe, Footer } from './styles';
@@ -23,7 +23,7 @@ const SignIn: React.FC = () => {
         <form>
           <h2>Fazer login</h2>
           <Input type="email" name="email" label="Email" />
-          <Input type="password" name="password" label="Senha" icon />
+          <Input type="password" name="password" label="Senha" />
           <div>
             <RememberMe>
               <Checkbox />

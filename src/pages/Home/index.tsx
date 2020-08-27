@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { FiPower } from 'react-icons/fi';
 
 import logo from '../../assets/images/logo.svg';
@@ -19,6 +20,8 @@ import {
 } from './styles';
 
 const Home: React.FC = () => {
+  const history = useHistory();
+
   return (
     <Container>
       <Header>
@@ -56,7 +59,11 @@ const Home: React.FC = () => {
               <span>Estudar</span>
             </div>
           </button>
-          <button type="button" className="give-classes">
+          <button
+            type="button"
+            className="give-classes"
+            onClick={() => history.push('/give-classes')}
+          >
             <div>
               <img src={giveClasses} alt="Dar aulas" />
               <span>Dar Aulas</span>

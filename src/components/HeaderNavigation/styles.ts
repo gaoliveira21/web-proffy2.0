@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.nav`
   width: 100%;
   background: var(--color-primary-dark);
   padding: 1.4rem 0;

@@ -63,6 +63,27 @@ export const Header = styled.header`
     grid-area: landing;
     width: 100%;
   }
+
+  @media (min-width: 1100px) {
+    display: grid;
+    grid-template-rows: 0.4fr 0.6fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'profile profile'
+      'logo landing';
+
+    > div:first-child {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    > img {
+      grid-area: landing;
+      width: 60%;
+      display: flex;
+      align-self: flex-end;
+    }
+  }
 `;
 
 export const LogoContent = styled.div`
@@ -96,6 +117,12 @@ export const Main = styled.main`
   grid-template-areas: 'welcome' 'buttons' 'connections';
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 1100px) {
+    grid-template-rows: 100%;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-areas: 'welcome connections buttons';
+  }
 `;
 
 export const Welcome = styled.div`
@@ -104,6 +131,10 @@ export const Welcome = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  @media (min-width: 1100px) {
+    text-align: left;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -155,6 +186,19 @@ export const Buttons = styled.div`
       background: var(--color-secondary-dark);
     }
   }
+
+  @media (min-width: 1100px) {
+    flex-direction: row;
+
+    button {
+      width: 48%;
+      height: 100%;
+    }
+
+    button.study {
+      margin-right: 2%;
+    }
+  }
 `;
 
 export const Connections = styled.div`
@@ -167,5 +211,9 @@ export const Connections = styled.div`
   p {
     color: var(--color-text-complement);
     font-size: 1.2rem;
+  }
+
+  @media (min-width: 1100px) {
+    text-align: right;
   }
 `;

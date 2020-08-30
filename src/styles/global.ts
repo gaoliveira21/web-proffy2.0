@@ -21,6 +21,7 @@ export default createGlobalStyle`
     --color-button-disabled: #DCDCE5;
     --color-box-base: #FFFFFF;
     --color-box-footer: #FAFAFC;
+    --color-red: #E33D3D;
 
     font-size: 60%;
   }

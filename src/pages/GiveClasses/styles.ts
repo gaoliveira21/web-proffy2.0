@@ -74,6 +74,9 @@ export const Main = styled.main`
       padding: 0 4rem;
 
       legend {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
         font-family: Archivo;
         font-weight: bold;
@@ -91,10 +94,11 @@ export const Main = styled.main`
           font-family: Archivo;
           font-size: 1.8rem;
           outline: 0;
+          cursor: pointer;
         }
       }
 
-      > div.input-block {
+      div.input-block {
         display: flex;
         flex-direction: column;
 
@@ -131,6 +135,28 @@ export const Main = styled.main`
           }
         }
       }
+
+      div.schedule-footer {
+        display: grid;
+        grid-template-columns: 0.8fr 1.4fr 0.8fr;
+        grid-column-gap: 0.5rem;
+        align-items: center;
+        margin: 0.5rem 0;
+
+        div.line {
+          width: 100%;
+          height: 1px;
+          background: var(--color-line-in-white);
+        }
+
+        button {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          color: var(--color-red);
+          font-family: Archivo;
+        }
+      }
     }
 
     footer {
@@ -138,6 +164,9 @@ export const Main = styled.main`
       border-top: 1px solid var(--color-line-in-white);
       width: 100%;
       padding: 4rem;
+      margin-bottom: 4rem;
+      border-bottom-left-radius: 0.8rem;
+      border-bottom-right-radius: 0.8rem;
 
       div.warning {
         display: grid;
@@ -165,6 +194,34 @@ export const Main = styled.main`
 
   @media (min-width: 1100px) {
     padding: 0 20% 8rem;
+
+    form fieldset div.input-block.row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    form fieldset.about-class {
+      display: grid;
+      grid-template-columns: 0.6fr 0.4fr;
+      grid-column-gap: 2rem;
+    }
+
+    form fieldset.available div.schedule-block div.schedule {
+      display: grid;
+      grid-template-columns: 0.6fr 0.2fr 0.2fr;
+      grid-column-gap: 2rem;
+    }
+
+    form fieldset.available div.schedule-block div.schedule-footer {
+      grid-template-columns: 1fr 0.5fr 1fr;
+    }
+
+    form footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
   }
 `;
 
@@ -173,11 +230,10 @@ export const AvatarBlock = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  position: relative;
 
   img {
-    width: 50%;
-    height: 50%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
   }
 
@@ -187,5 +243,14 @@ export const AvatarBlock = styled.div`
     font-family: Archivo;
     font-weight: bold;
     padding: 1.5rem 0;
+  }
+
+  @media (min-width: 1100px) {
+    flex-direction: row !important;
+    margin-bottom: 3rem;
+
+    p {
+      margin-left: 2.5rem;
+    }
   }
 `;

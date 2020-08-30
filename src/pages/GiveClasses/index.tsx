@@ -27,7 +27,7 @@ const GiveClasses: React.FC = () => {
         <form>
           <fieldset>
             <legend>Seus dados</legend>
-            <div className="input-block">
+            <div className="input-block row">
               <AvatarBlock>
                 <img
                   src="https://api.adorable.io/avatars/285/abott@adorable.png"
@@ -49,7 +49,7 @@ const GiveClasses: React.FC = () => {
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset className="about-class">
             <legend>Sobre a aula</legend>
             <div className="input-block">
               <label htmlFor="subject">Matéria</label>
@@ -65,26 +65,35 @@ const GiveClasses: React.FC = () => {
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset className="available">
             <legend>
               Horários disponíveis
               <button type="button">+ Novo horário</button>
             </legend>
-            <div className="input-block">
-              <label htmlFor="week-day">Dia da semana</label>
-              <select name="week-day" defaultValue="" id="week-day">
-                <option value="" disabled>
-                  Seleciona o dia
-                </option>
-              </select>
-            </div>
-            <div className="input-block">
-              <label htmlFor="from">Das</label>
-              <input type="text" id="from" name="from" />
-            </div>
-            <div className="input-block">
-              <label htmlFor="to">Até</label>
-              <input type="text" id="to" name="to" />
+            <div className="schedule-block">
+              <div className="schedule">
+                <div className="input-block">
+                  <label htmlFor="week-day">Dia da semana</label>
+                  <select name="week-day" defaultValue="" id="week-day">
+                    <option value="" disabled>
+                      Seleciona o dia
+                    </option>
+                  </select>
+                </div>
+                <div className="input-block">
+                  <label htmlFor="from">Das</label>
+                  <input type="text" id="from" name="from" />
+                </div>
+                <div className="input-block">
+                  <label htmlFor="to">Até</label>
+                  <input type="text" id="to" name="to" />
+                </div>
+              </div>
+              <div className="schedule-footer">
+                <div className="line" />
+                <button type="button">Excluir horário</button>
+                <div className="line" />
+              </div>
             </div>
           </fieldset>
           <footer>

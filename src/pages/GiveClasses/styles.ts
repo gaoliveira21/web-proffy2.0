@@ -66,11 +66,12 @@ export const Main = styled.main`
 
     margin-top: -4rem;
     border-radius: 0.8rem;
-    padding: 4rem;
+    padding-top: 4rem;
 
     fieldset {
       border: 0;
       margin-bottom: 4rem;
+      padding: 0 4rem;
 
       legend {
         width: 100%;
@@ -80,6 +81,17 @@ export const Main = styled.main`
         color: var(--color-text-title);
         padding-bottom: 1.6rem;
         border-bottom: 1px solid var(--color-line-in-white);
+
+        > button {
+          border: 0;
+          background: transparent;
+          padding-top: 0.8rem;
+          color: var(--color-primary);
+          font-weight: bold;
+          font-family: Archivo;
+          font-size: 1.8rem;
+          outline: 0;
+        }
       }
 
       > div.input-block {
@@ -96,16 +108,56 @@ export const Main = styled.main`
           color: var(--color-text-complement);
           font-size: 1.6rem;
           padding: 1rem 0;
+
+          small {
+            font-size: 1.2rem;
+            opacity: 0.8;
+          }
         }
 
         input,
-        textarea {
+        textarea,
+        select {
           width: 100%;
           padding: 1.2rem;
           background: var(--color-input-background);
           border: 1px solid var(--color-line-in-white);
           border-radius: 0.8rem;
           margin-bottom: 1rem;
+          outline: none;
+
+          &:focus {
+            border: 1px solid var(--color-primary);
+          }
+        }
+      }
+    }
+
+    footer {
+      background: var(--color-input-background);
+      border-top: 1px solid var(--color-line-in-white);
+      width: 100%;
+      padding: 4rem;
+
+      div.warning {
+        display: grid;
+        grid-template-columns: 0.3fr 0.7fr;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        > img {
+          align-self: center;
+          justify-self: center;
+        }
+
+        > p {
+          font-size: 1.4rem;
+          font-family: Poppins;
+
+          > strong {
+            font-weight: 400;
+            color: var(--color-primary);
+          }
         }
       }
     }

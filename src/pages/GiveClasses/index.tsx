@@ -1,8 +1,10 @@
 import React from 'react';
 
 import HeaderNavigation from '../../components/HeaderNavigation/index';
+import Button from '../../components/Button';
 
 import rocket from '../../assets/images/icons/rocket.svg';
+import warning from '../../assets/images/icons/warning.svg';
 
 import { Container, Header, Main, AvatarBlock } from './styles';
 
@@ -49,11 +51,55 @@ const GiveClasses: React.FC = () => {
 
           <fieldset>
             <legend>Sobre a aula</legend>
+            <div className="input-block">
+              <label htmlFor="subject">Matéria</label>
+              <select name="subject" defaultValue="" id="subject">
+                <option value="" disabled>
+                  Seleciona qual você quer ensinar
+                </option>
+              </select>
+            </div>
+            <div className="input-block">
+              <label htmlFor="price">Custo da sua hora por aula</label>
+              <input type="text" id="price" value="R$ " />
+            </div>
           </fieldset>
 
           <fieldset>
-            <legend>Horários disponíveis</legend>
+            <legend>
+              Horários disponíveis
+              <button type="button">+ Novo horário</button>
+            </legend>
+            <div className="input-block">
+              <label htmlFor="week-day">Dia da semana</label>
+              <select name="week-day" defaultValue="" id="week-day">
+                <option value="" disabled>
+                  Seleciona o dia
+                </option>
+              </select>
+            </div>
+            <div className="input-block">
+              <label htmlFor="from">Das</label>
+              <input type="text" id="from" name="from" />
+            </div>
+            <div className="input-block">
+              <label htmlFor="to">Até</label>
+              <input type="text" id="to" name="to" />
+            </div>
           </fieldset>
+          <footer>
+            <div className="warning">
+              <img src={warning} alt="Alerta" />
+              <p>
+                <strong>Importante</strong>
+                <br />
+                Preencha todos os dados corretamente
+              </p>
+            </div>
+            <div className="submit">
+              <Button type="submit">Salvar cadastro</Button>
+            </div>
+          </footer>
         </form>
       </Main>
     </Container>

@@ -106,56 +106,6 @@ export const Main = styled.main`
           display: flex;
           flex-direction: column;
         }
-
-        label {
-          font-family: Poppins;
-          color: var(--color-text-complement);
-          font-size: 1.6rem;
-          padding: 1rem 0;
-
-          small {
-            font-size: 1.2rem;
-            opacity: 0.8;
-          }
-        }
-
-        input,
-        textarea,
-        select {
-          width: 100%;
-          padding: 1.2rem;
-          background: var(--color-input-background);
-          border: 1px solid var(--color-line-in-white);
-          border-radius: 0.8rem;
-          margin-bottom: 1rem;
-          outline: none;
-
-          &:focus {
-            border: 1px solid var(--color-primary);
-          }
-        }
-      }
-
-      div.schedule-footer {
-        display: grid;
-        grid-template-columns: 0.8fr 1.4fr 0.8fr;
-        grid-column-gap: 0.5rem;
-        align-items: center;
-        margin: 0.5rem 0;
-
-        div.line {
-          width: 100%;
-          height: 1px;
-          background: var(--color-line-in-white);
-        }
-
-        button {
-          border: 0;
-          background: transparent;
-          cursor: pointer;
-          color: var(--color-red);
-          font-family: Archivo;
-        }
       }
     }
 
@@ -205,16 +155,6 @@ export const Main = styled.main`
       display: grid;
       grid-template-columns: 0.6fr 0.4fr;
       grid-column-gap: 2rem;
-    }
-
-    form fieldset.available div.schedule-block div.schedule {
-      display: grid;
-      grid-template-columns: 0.6fr 0.2fr 0.2fr;
-      grid-column-gap: 2rem;
-    }
-
-    form fieldset.available div.schedule-block div.schedule-footer {
-      grid-template-columns: 1fr 0.5fr 1fr;
     }
 
     form footer {

@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 import Textarea from '../../components/Textarea';
+import ScheduleInput from '../../components/ScheduleInput';
 
 import rocket from '../../assets/images/icons/rocket.svg';
 import warning from '../../assets/images/icons/warning.svg';
@@ -64,36 +65,7 @@ const GiveClasses: React.FC = () => {
               value="R$ "
             />
           </fieldset>
-
-          <fieldset className="available">
-            <legend>
-              Horários disponíveis
-              <button type="button">+ Novo horário</button>
-            </legend>
-            <div className="schedule-block">
-              <div className="schedule">
-                <Select
-                  defaultValue=""
-                  name="week-day"
-                  label="Dia da semana"
-                  options={[
-                    {
-                      value: '',
-                      label: 'Seleciona o dia',
-                      disabled: true,
-                    },
-                  ]}
-                />
-                <Input label="Das" name="from" />
-                <Input label="Até" name="to" />
-              </div>
-              <div className="schedule-footer">
-                <div className="line" />
-                <button type="button">Excluir horário</button>
-                <div className="line" />
-              </div>
-            </div>
-          </fieldset>
+          <ScheduleInput />
           <footer>
             <div className="warning">
               <img src={warning} alt="Alerta" />

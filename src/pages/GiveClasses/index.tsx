@@ -2,6 +2,9 @@ import React from 'react';
 
 import HeaderNavigation from '../../components/HeaderNavigation/index';
 import Button from '../../components/Button';
+import Input from '../../components/Input';
+import Select from '../../components/Select';
+import Textarea from '../../components/Textarea';
 
 import rocket from '../../assets/images/icons/rocket.svg';
 import warning from '../../assets/images/icons/warning.svg';
@@ -35,34 +38,31 @@ const GiveClasses: React.FC = () => {
                 />
                 <p>Gabriel José</p>
               </AvatarBlock>
-              <div>
-                <label htmlFor="whatsapp">Whatsapp</label>
-                <input type="text" id="whatsapp" />
-              </div>
+              <Input label="Whatsapp" name="whatsapp" />
             </div>
 
-            <div className="input-block">
-              <label htmlFor="bio">
-                Biografia <small>(Máximo 300 caracteres)</small>
-              </label>
-              <textarea name="bio" id="bio" rows={10} maxLength={300} />
-            </div>
+            <Textarea name="bio" label="Biografia" rows={10} maxLength={300} />
           </fieldset>
 
           <fieldset className="about-class">
             <legend>Sobre a aula</legend>
-            <div className="input-block">
-              <label htmlFor="subject">Matéria</label>
-              <select name="subject" defaultValue="" id="subject">
-                <option value="" disabled>
-                  Seleciona qual você quer ensinar
-                </option>
-              </select>
-            </div>
-            <div className="input-block">
-              <label htmlFor="price">Custo da sua hora por aula</label>
-              <input type="text" id="price" value="R$ " />
-            </div>
+            <Select
+              defaultValue=""
+              name="subject"
+              label="Matéria"
+              options={[
+                {
+                  value: '',
+                  label: 'Selecione qual você quer ensianr',
+                  disabled: true,
+                },
+              ]}
+            />
+            <Input
+              label="Custo da sua hora por aula"
+              name="price"
+              value="R$ "
+            />
           </fieldset>
 
           <fieldset className="available">
@@ -72,22 +72,20 @@ const GiveClasses: React.FC = () => {
             </legend>
             <div className="schedule-block">
               <div className="schedule">
-                <div className="input-block">
-                  <label htmlFor="week-day">Dia da semana</label>
-                  <select name="week-day" defaultValue="" id="week-day">
-                    <option value="" disabled>
-                      Seleciona o dia
-                    </option>
-                  </select>
-                </div>
-                <div className="input-block">
-                  <label htmlFor="from">Das</label>
-                  <input type="text" id="from" name="from" />
-                </div>
-                <div className="input-block">
-                  <label htmlFor="to">Até</label>
-                  <input type="text" id="to" name="to" />
-                </div>
+                <Select
+                  defaultValue=""
+                  name="week-day"
+                  label="Dia da semana"
+                  options={[
+                    {
+                      value: '',
+                      label: 'Seleciona o dia',
+                      disabled: true,
+                    },
+                  ]}
+                />
+                <Input label="Das" name="from" />
+                <Input label="Até" name="to" />
               </div>
               <div className="schedule-footer">
                 <div className="line" />
